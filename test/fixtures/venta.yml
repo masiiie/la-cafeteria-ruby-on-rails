@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mercancia: one
+  momento: 2018-05-23 23:41:48
+
+two:
+  mercancia: two
+  momento: 2018-05-23 23:41:48

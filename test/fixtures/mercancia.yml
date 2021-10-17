@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product: one
+  jornada: one
+  recibido: 1
+
+two:
+  product: two
+  jornada: two
+  recibido: 1

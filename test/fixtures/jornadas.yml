@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2018-05-23
+  fondo_inicial: 9.99
+  fondo_final: 9.99
+  dependiente: one
+
+two:
+  fecha: 2018-05-23
+  fondo_inicial: 9.99
+  fondo_final: 9.99
+  dependiente: two
