@@ -1,0 +1,2 @@
+module JornadaHelper
+end

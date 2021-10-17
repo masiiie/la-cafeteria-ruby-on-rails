@@ -1,0 +1,32 @@
+<%= form_for(mercancium) do |f| %>
+  <% if mercancium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mercancium.errors.count, "error") %> prohibited this mercancium from being saved:</h2>
+
+      <ul>
+      <% mercancium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product_id %>
+    <%= f.text_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :jornada_id %>
+    <%= f.text_field :jornada_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :recibido %>
+    <%= f.number_field :recibido %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+<div><%= image_tag(@product.foto, size: "300x300", alt: "Edit Entry") %><div class="desc"><%= @product.nombre %></div></div>
+<p>
+<strong>Descripcion:</strong>
+<%= @product.descripcion %>
+</p>
+
+<p>
+<strong>Precio:</strong>
+<%= @product.precio %>$
+</p>
+
+<p>
+<strong>Medicion:</strong>
+<%= @product.medicion %>
+</p>
+</div>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

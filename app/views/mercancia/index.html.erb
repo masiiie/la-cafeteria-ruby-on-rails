@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mercancia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Recibido</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mercancia.each do |mercancium| %>
+      <tr>
+        <td><%= Product.find(mercancium.product).nombre  %></td>
+        <td><%= mercancium.recibido %></td>
+        <td><%= link_to 'Show', mercancium %></td>
+        <td><%= link_to 'Edit', edit_mercancium_path(mercancium) %></td>
+        <td><%= link_to 'Destroy', mercancium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mercancium', new_mercancium_path %>

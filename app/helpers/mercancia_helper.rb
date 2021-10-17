@@ -1,0 +1,2 @@
+module MercanciaHelper
+end

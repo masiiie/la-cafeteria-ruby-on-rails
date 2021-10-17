@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= link_to 'Producto:', @mercancium.product %></strong>
+  <%= Product.find(@mercancium.product).nombre  %>
+</p>
+
+<p>
+  <strong><%= link_to 'Jornada:', @mercancium.jornada %></strong>
+  <%= Jornada.find(@mercancium.jornada).fecha  %>
+</p>
+
+<p>
+  <strong>Recibido:</strong>
+  <%= @mercancium.recibido %>
+</p>
+
+<%= link_to 'Edit', edit_mercancium_path(@mercancium) %> |
+<%= link_to 'Back', mercancia_path %>

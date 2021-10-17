@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<div style='margin: 0px 0px 70px 0px;'>
+<h1>Jornadas</h1>
+</div>
+
+
+<table>
+<thead>
+  <tr>
+    <th>Fecha</th>
+    <th>Responsable</th>
+    <th></th>
+  </tr>
+</thead>
+
+<tbody>
+<% @jornadas.each do |jornada| %>
+    <tr>
+      <td><%= jornada.fecha %></td>
+      <td><%= Dependiente.find(jornada.dependiente).nombre  %></td>
+      <td><%= link_to 'Show', jornada %></td>
+      <td><%= link_to 'Edit', edit_jornada_path(jornada) %></td>
+      <td><%= link_to 'Destroy', jornada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+
+
+<div style='margin: 100px;'>
+<%= link_to 'New Jornada', new_jornada_path %>
+</div>

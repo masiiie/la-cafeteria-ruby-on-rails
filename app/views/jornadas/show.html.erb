@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+
+<div style="align-items: center;margin: 20px;text-align: left;" >
+<h1><%= @jornada.fecha %></h1>
+
+<p>
+  <strong>Fondo inicial:</strong>
+  <%= @jornada.fondo_inicial %>
+</p>
+
+<p>
+  <strong>Fondo final:</strong>
+  <%= @jornada.fondo_final %>
+</p>
+
+<p>
+  <strong>Dependiente:</strong>
+  <%= Dependiente.find(@jornada.dependiente).nombre %>
+</p>
+</div>
+
+
+<div style="align-items: left" >
+
+<h3 style="margin: 0px 0px 40px 0px;text-align: center;">Productos recibidos</h3>
+
+<table>
+<thead>
+  <tr>
+    <th>Producto</th>
+    <th>Recibido</th>
+    <th>Vendido</th>
+    <th colspan="3"></th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @mercancia.each do |mercancium| %>
+    <tr>
+      <td><%= link_to Product.find(mercancium.product).nombre, Product.find(mercancium.product) %></td>
+      <td><%= mercancium.recibido %></td>
+      <td><%= Ventum.where(mercancia_id: mercancium.id).count  %></td>
+      <td><%= link_to 'Destroy', mercancium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+
+</div>
+<div style="align-items: center;margin: 20px;text-align: left;" >
+<%= link_to 'Edit', edit_jornada_path(@jornada) %> |
+<%= link_to 'Back', jornadas_path %>
+</div>
+
+
